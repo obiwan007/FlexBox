@@ -1,3 +1,59 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-flex">
+  <h1>
+    <div class="row">
+      <div class="col-md-3">
+        <button class="btn btn-default"> Mein erster Button</button>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-default"> Mein erster Button</button>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-default"> Mein erster Button</button>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-default"> Mein erster Button</button>
+      </div>
+    </div>
+    {{title}}
+
+    <div fxLayout='column' class="zero">
+      Zero
+      <div fxFlex="33" class="one">One</div>
+      <div fxFlex="33%" [fxLayout]="direction" class="two">
+
+        <div fxFlex="22%" class="two_one">Two One</div>
+        <div fxFlex="205px" class="two_two">Two Two</div>
+        <div fxFlex="30" class="two_three">Two Three</div>
+
+      </div>
+      <div fxFlex class="three">Three</div>
+
+    </div>
+    <br>
+    <div fxLayout="row" class="zero" style="height: 400px">
+
+      <div fxFlex="33%" fxLayout="column" class="one">
+
+        <div fxFlex="200px" class="two_one">Line Two One</div>
+        <div fxFlex="80%" class="two_two" style="overflow:auto;">Line Two Two
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let d of data">
+                {{d}}
+                </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+
+      <div fxFlex="200px" class="two">two</div>
+      <div fxFlex class="three">Three Filled</div>
+
+
+    </div>
+
+
+  </h1>
+</div>
